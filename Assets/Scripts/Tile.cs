@@ -50,6 +50,10 @@ namespace Assets.Scripts
         void OnMouseDown()
         {  
             offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint((Vector2)Input.mousePosition);
+            if (isDragable && SpriteWrong.GetComponent<SpriteRenderer>().enabled)
+            {
+                SpriteWrong.GetComponent<SpriteRenderer>().enabled = false;
+            }
         }
 
         void OnMouseUp()

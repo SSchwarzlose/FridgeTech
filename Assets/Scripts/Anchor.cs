@@ -13,4 +13,14 @@ public class Anchor : MonoBehaviour
     {
         this.renderer.material.color = Color.clear;
     }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        this.renderer.material.color = newColor;
+    }
+
+    void OnCollisionExit2D(Collision2D col)
+    {
+        this.renderer.material.color = Color.clear;
+    }
 }

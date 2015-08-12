@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
-    private bool isSceneEnding = false;
+    //private bool isSceneEnding = false;
     private string nextScene;
 
     public static GameManager Instance
