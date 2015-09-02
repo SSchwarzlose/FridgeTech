@@ -8,6 +8,7 @@ public class ScreenManager : MonoBehaviour
     public Animator InitiallyOpen;
 
     private Animator open;
+    public Animator pauseMenu;
 
     private int openParameterId;
 
@@ -23,6 +24,17 @@ public class ScreenManager : MonoBehaviour
 
         if (InitiallyOpen == null) return;
         OpenPanel(InitiallyOpen);
+    }
+
+    void Update()
+    {
+        if (pauseMenu != null)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                this.OpenPanel(pauseMenu);
+            } 
+        }
     }
 
     private GameObject FindFirstEnabledSelectable(GameObject o)
@@ -100,5 +112,10 @@ public class ScreenManager : MonoBehaviour
     public void CloseApplication()
     {
         Application.Quit();
+    }
+
+    public void ChangeScene(int Scene)
+    {
+        Application.LoadLevel(Scene);
     }
 }

@@ -114,12 +114,16 @@ namespace Assets.Scripts
                 this.TooltipText.text = this.name;
                 this.TooltipText.enabled = !Input.GetMouseButton(0);
             }
+
+            this.renderer.material.color = Color.green;
         }
 
         void OnMouseExit()
         {
             if(TooltipText != null)
                 this.TooltipText.enabled = false;
+
+            this.renderer.material.color = Color.white;
         }
     }
 }

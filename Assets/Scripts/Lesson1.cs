@@ -22,48 +22,14 @@ public class Lesson1 : MonoBehaviour
 
     void CheckTilePosition(Tile tile, GameObject target)
     {
-        switch (tile.name)
+        if (target.name == "Anchor_" + tile.name)
         {
-            case "Verdichter":
-                {
-                    if (target.name == "Anchor_1")
-                    {
-                        tile.isInRightPlace = true;
-                        _tileCounter++;
-                    }
-                    else tile.isInRightPlace = false;
-                }
-                break;
-            case "Drosselorgan":
-                {
-                    if (target.name == "Anchor_3")
-                    {
-                        tile.isInRightPlace = true;
-                        _tileCounter++;
-                    }
-                    else tile.isInRightPlace = false;
-                }
-                break;
-            case "Verdampfer":
-                {
-                    if (target.name == "Anchor_4")
-                    {
-                        tile.isInRightPlace = true;
-                        _tileCounter++;
-                    }
-                    else tile.isInRightPlace = false;
-                }
-                break;
-            case "Verfluessiger":
-                {
-                    if (target.name == "Anchor_2")
-                    {
-                        tile.isInRightPlace = true;
-                        _tileCounter++;
-                    }
-                    else tile.isInRightPlace = false;
-                }
-                break;
+            tile.isInRightPlace = true;
+            _tileCounter++;
+        }
+        else
+        {
+            tile.isInRightPlace = false;
         }
     }
 
