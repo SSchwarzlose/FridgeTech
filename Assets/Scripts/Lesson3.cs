@@ -56,6 +56,9 @@ public class Lesson3 : MonoBehaviour
         Controller.TilePlaced += this.CheckTilePosition;
         GameObject[] Anchors = GameObject.FindGameObjectsWithTag(Tags.Anchor);
         _anchorCount = Anchors.Length;
+
+        Debug.Log("Anchors: " + _anchorCount);
+        Debug.Log("Tiles: " + _tileCount    );
     }
 
     /// <summary>
@@ -105,5 +108,11 @@ public class Lesson3 : MonoBehaviour
     public void OnClickButtonBack()
     {
         Application.LoadLevel("Main");
+    }
+
+    void ShowDebugInfo()
+    {
+        Debug.Log("TileCount: "+ _tileCount);
+        Debug.Log("Anchorcount: " + _anchorCount);
     }
 }

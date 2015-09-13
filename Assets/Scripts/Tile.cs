@@ -94,7 +94,7 @@ namespace Assets.Scripts
 
                 foreach (GameObject anchor in this.Anchors)
                 {
-                    if (gameObject.collider2D.OverlapPoint(anchor.transform.position))
+                    if (gameObject.GetComponent<Collider2D>().OverlapPoint(anchor.transform.position))
                     {
                         anchorPosition = true;
                         target = anchor;
@@ -115,7 +115,7 @@ namespace Assets.Scripts
                 this.TooltipText.enabled = !Input.GetMouseButton(0);
             }
 
-            this.renderer.material.color = Color.green;
+            this.GetComponent<Renderer>().material.color = Color.green;
         }
 
         void OnMouseExit()
@@ -123,7 +123,7 @@ namespace Assets.Scripts
             if(TooltipText != null)
                 this.TooltipText.enabled = false;
 
-            this.renderer.material.color = Color.white;
+            this.GetComponent<Renderer>().material.color = Color.white;
         }
     }
 }

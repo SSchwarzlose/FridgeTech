@@ -13,5 +13,9 @@ using System;
 public class GameSettings
 {
     public bool ShowInfoscreen;
+    public int ScreenWidth;
+    public int ScreenHeight;
+    public bool Fullscreen;
+    public string Username;
 
 }

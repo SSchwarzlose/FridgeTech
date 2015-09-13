@@ -33,10 +33,6 @@ public class Lesson1 : MonoBehaviour
         }
     }
 
-    public void DisableIntroduction()
-    {
-    }
-
     private void OnLessonEnd()
     {
         ScreenManager.OpenPanel(Panel_LessonEnd);
