@@ -99,6 +99,7 @@ namespace Assets.Scripts
                         anchorPosition = true;
                         target = anchor;
                         NewPosition = anchor.transform.position;
+                        NewPosition.z = -0.2f;
                         break;
                     }
                     else anchorPosition = false;

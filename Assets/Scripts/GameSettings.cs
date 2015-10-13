@@ -8,14 +8,15 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using UnityEngine;
 
 [Serializable]
-public class GameSettings
+public class GameSettings  :ScriptableObject
 {
-    public bool ShowInfoscreen;
+    public bool ShowInfoscreen = true;
     public int ScreenWidth;
     public int ScreenHeight;
-    public bool Fullscreen;
-    public string Username;
+    public bool Fullscreen = false;
+    public string Username = "Azubi";
 
 }
